@@ -1,8 +1,8 @@
 
 from pymongo import MongoClient
 import bcrypt
-
-client = MongoClient("mongodb+srv://vavaibhav3026:hQiMCwjpYp1OaYd3@retail.2pcje03.mongodb.net/?retryWrites=true&w=majority&appName=Retail")
+import os
+client = MongoClient(os.getenv("MONGODB_URI")))
 db = client['Retail']
 users = db['users']
 
